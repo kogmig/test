@@ -1,4 +1,4 @@
-# NewEgg SDK for java
+# NewEgg Marketplace SDK for java
 
 ## Technology
 - java 1.8+
