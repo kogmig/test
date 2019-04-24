@@ -1,10 +1,13 @@
 # NewEgg Marketplace SDK for java
 
-## Technology
-- java 1.8+
-- openfeign
-- log4j2
-- commons-configuration2
+Newegg Marketplace SDK(Java) is a library to help Java programmer easily integrates with Newegg Marketplace API. It provides the definition of the data objects models to help coder create the request and resolve the response. It also provides customize of logger and retry mechanism.
+
+To use the SDK to communicate with Newegg API, you need to be a registered seller and get the 'Authorization Token' and 'Secret Key' from https://sellerportal.newegg.com. You can put this information into a 'newegg.properties' file, and load the setting from it by APIConfig.FromJsonFile method. Without the Authorization Token and Secret Key, you can run the test project with Simulation Mode. This mode is to help you understand the SDK before actual use.
+
+The solution is based on jdk 1.8+. The library Dependents on:
+- openfeign(10.1.0)
+- log4j2(2.11.1)
+- commons-configuration2(2.4)
 
 ## build
 - mvn package
