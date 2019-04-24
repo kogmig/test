@@ -5,7 +5,7 @@ Newegg Marketplace SDK(C#) is a library to help .Net programmer easily integrate
 To use the SDK to communicate with Newegg API, you need to be a registered seller and get the 'Authorization Token' and 'Secret Key' from https://sellerportal.newegg.com. You can put this information into a JSON file, and load the setting from it by APIConfig.FromJsonFile method.
 Without the Authorization Token and Secret Key, you can run the test project with Simulation Mode. This mode is to help you understand the SDK before actual use.  
 
-The library contains 2 library projects:  Newegg.Marketplace.SDK.Base and Newegg.Marketplace.SDK. The first one is the framework of the SDK, and the second one is the business logic model and interface to various API. The code is base on .NET Standard 2.0, you can build it with .Net framework 4.6 or .Net Core 2.1 too.
+The solution contains 2 library projects:  Newegg.Marketplace.SDK.Base and Newegg.Marketplace.SDK. The first one is the framework of the SDK, and the second one is the business logic model and interface to various API. The code is base on .NET Standard 2.0, you can build it with .Net framework 4.6 or .Net Core 2.1 too.
 
 
 
