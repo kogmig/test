@@ -1,4 +1,4 @@
-# NewEgg Marketplace SDK for java
+# NewEgg Marketplace SDK for Java
 
 Newegg Marketplace SDK(Java) is a library to help Java programmer easily integrates with Newegg Marketplace API. It provides the definition of the data objects models to help coder create the request and resolve the response. It also provides customize of logger and retry mechanism.
 
