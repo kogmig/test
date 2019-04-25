@@ -1,11 +1,10 @@
 # NewEgg Marketplace SDK for .Net
 
-Newegg Marketplace SDK(C#) is a library to help .Net programmer easily integrates with Newegg Marketplace API. It provides the definition of the data objects models to help coder create the request and resolve the response. It also provides customize of logger and retry mechanism. 
+Newegg Marketplace SDK(C#) is a library to help .Net programmers easily integrate their application with the Newegg Marketplace API.  Included are definitions for the data objects models to create the request and resolve the response.  The logger and retry mechanism can be customized to your requirements.
 
-To use the SDK to communicate with Newegg API, you need to be a registered seller and get the 'Authorization' and 'Secret Key' from https://sellerportal.newegg.com. You can put this information into a JSON file, and load the setting from it by APIConfig.FromJsonFile method.
-Without the Authorization Token and Secret Key, you can run the test project with Simulation Mode. This mode is to help you understand the SDK before actual use.  
+To use the SDK to communicate with the Newegg API, you need to be a registered seller and have an 'Authorization' and 'Secret Key' from https://sellerportal.newegg.com.  Put this information into a JSON file and load the setting using the APIConfig.FromJsonFile method. Without the Authorization Token and Secret Key you can run the test project in Simulation Mode.  This is provided to help you understand the SDK before actual use.
 
-The solution contains 2 library projects: Newegg.Marketplace.SDK.Base and Newegg.Marketplace.SDK. The first one is the framework of the SDK, and the second one is the business logic model and interface to various API. The code is base on .NET Standard 2.0, you can build it with .Net framework 4.6 or .Net Core 2.1 too.
+The solution contains 2 library projects: Newegg.Marketplace.SDK.Base and Newegg.Marketplace.SDK. The first one is the framework of the SDK, and the second one is the business logic model and interface to various API. The code is based on .NET Standard 2.0, you can build it with .Net framework 4.6 or .Net Core 2.1.
 
 
 ## Target Frameworks
@@ -63,8 +62,31 @@ OrderCall ordercall = new OrderCall(client);
 var orderstatus = await ordercall.GetOrderStatus("105137040", 304);
 ```    
 
-- NLog configuration file location
-    
+- How to use the customize retry setting?
+There is a Connection section in the config json file.
+It contains the setting of 
+  * RequestTimeoutMs：Microseconds count before throw the time out exception.
+  * AttemptsTimes: Retry times
+  * RetryIntervalMs: Microseconds count of the interval to retry.
+  
+```json
+{
+  "SellerID": "****",
+  "Credentials": {
+    "Authorization": "********************************",
+    "SecretKey": "*******-****-****-****-************"
+  },
+  "Connection": {
+    "RequestTimeoutMs": 30000,
+    "AttemptsTimes": 5,
+    "RetryIntervalMs": 1000
+  },
+  "APIFormat": "XML",
+  "Platform": "CAN"
+}
+```
+
+- NLog configuration file location and how to customize log
 Please refer https://github.com/NLog/NLog/wiki/Configuration-file#configuration-file-locations
 
 
