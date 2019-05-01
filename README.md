@@ -99,46 +99,37 @@ Please refer https://github.com/NLog/NLog/wiki/Configuration-file#configuration-
 ## Modules
 
 ### Item
-- Item Management
-
+- Item Management  
     https://developer.newegg.com/newegg_marketplace_api/item_management/
 
 ### Seller
-- Seller Management
-
+- Seller Management  
     https://developer.newegg.com/newegg_marketplace_api/seller_management/
 
 ### Order
-- Order Management
-
+- Order Management  
     https://developer.newegg.com/newegg_marketplace_api/order_management/
     
 ### Shipping
-- Newegg Shipping Label Service
-
+- Newegg Shipping Label Service  
     https://developer.newegg.com/newegg_marketplace_api/newegg_shipping_label_service/
 
 ### Other
-- Verify Service Status
-
+- Verify Service Status  
     https://developer.newegg.com/newegg_marketplace_api/verify_service_status/
 
 ### SBN
-- Shipped by Newegg Management
-
+- Shipped by Newegg Management  
     https://developer.newegg.com/newegg_marketplace_api/sbn_shipped_by_newegg_management/
     
 ### DataFeed
-- DataFeed Management
-
+- DataFeed Management  
     https://developer.newegg.com/newegg_marketplace_api/datafeed_management/
 
 ### Report
-- Reports Management
-
+- Reports Management  
     https://developer.newegg.com/newegg_marketplace_api/reports_management/
 
 ### RMA
-- RMA(Return Merchandise Authorization) Management
-
+- RMA(Return Merchandise Authorization) Management  
     https://developer.newegg.com/newegg_marketplace_api/rma_management/
