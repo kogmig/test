@@ -14,7 +14,14 @@ The solution contains 2 library projects: Newegg.Marketplace.SDK.Base and Newegg
 * .NET Framework 4.6 
 
 ## Installation
-
+* Package Manager
+    Install-Package Newegg.Marketplace.SDK -Version 0.1.1-beta
+* .Net CLI
+    Install-Package Newegg.Marketplace.SDK -Version 0.1.1-beta
+* PackageReference
+    <PackageReference Include="Newegg.Marketplace.SDK" Version="0.1.1-beta" />
+* Paket CLI
+    paket add Newegg.Marketplace.SDK --version 0.1.1-beta
 
 Download the zip file according to your framework, then upzip it.
 You can choose manually build it and link library from your project or direct include the project to your solution.
