@@ -1,8 +1,8 @@
 # NewEgg Marketplace SDK for .Net
 
-Newegg Marketplace SDK(C#) is a library to help .Net programmers easily integrate their application with the Newegg Marketplace API.  Included are definitions for the data objects models to create the request and resolve the response.  The logger and retry mechanism can be customized to your requirements.
+Newegg Marketplace SDK(C#) is a library to help .Net programmers easily integrate their application with the Newegg Marketplace API.  Included are definitions for the data objects models to create the request and resolve the response. The logger and retry mechanism can be customized to your requirements.
 
-To use the SDK to communicate with the Newegg API, you need to be a registered seller and have an 'Authorization' and 'Secret Key' from https://sellerportal.newegg.com.  Put this information into a JSON file and load the setting using the APIConfig.FromJsonFile method. Without the Authorization Token and Secret Key you can run the test project in Simulation Mode.  This is provided to help you understand the SDK before actual use.
+To use the SDK to communicate with the Newegg API, you need to be a registered seller and have an 'Authorization' and 'Secret Key' by . Put this information into a JSON file and load the setting using the APIConfig.FromJsonFile method. Without the 'API Key' and 'Secret Key' you can run the test project in Simulation Mode.  This is provided to help you understand the SDK before actual use.
 
 The solution contains 2 library projects: Newegg.Marketplace.SDK.Base and Newegg.Marketplace.SDK. The first one is the framework of the SDK, and the second one is the business logic model and interface to various API. The code is based on .NET Standard 2.0, you can build it with .Net framework 4.6 or .Net Core 2.1.
 
@@ -10,8 +10,11 @@ The solution contains 2 library projects: Newegg.Marketplace.SDK.Base and Newegg
 ## Target Frameworks
 
 * .NET Standard 2.0 
+* .NET Core 2.1 
+* .NET Framework 4.6 
 
 ## Installation
+
 
 Download the zip file according to your framework, then upzip it.
 You can choose manually build it and link library from your project or direct include the project to your solution.
@@ -61,6 +64,23 @@ OrderCall ordercall = new OrderCall(client);
 ```csharp
 var orderstatus = await ordercall.GetOrderStatus("105137040", 304);
 ```    
+
+- What's the settings in the Config?
+    * SellerID :  The 4-character Seller ID. Required.
+    * Credentials.Authorization: The API Key get from datafeeds@newegg.com. Required.
+    * Credentials.SecretKey: The Secret Key get from datafeeds@newegg.com. Required.
+    * Connection.RequestTimeoutMs: The number of milliseconds the system connection timed out. Optional, Default:
+    * Connection.AttemptsTimes: Number of retries after a failed connection. Optional, Default:
+    * Connection.RetryIntervalMs: The number of milliseconds between retry attempts. Optional, Default:
+    * BaseUrl: The base url of the Newegg marketplace API. Optional, Default: https://apis.newegg.com/marketplace/
+    * APIFormat: Content type used to call API.  The options are XML and Json. Optional, Default: XML.
+    * Platform: The platfrom of seller: There are three options: 
+        * USA: seller on www.newegg.com
+        * B2B: seller on www.neweggbussiness.com
+        * CAN: seller on www.newegg.ca
+     Optional, Default: USA.
+    
+    
 
 - How to use the customize retry setting?
 There is a Connection section in the config json file.
