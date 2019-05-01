@@ -7,13 +7,10 @@ To use the SDK to communicate with the Newegg API, you need to be a registered s
 The solution contains 2 library projects: Newegg.Marketplace.SDK.Base and Newegg.Marketplace.SDK. The first one is the framework of the SDK, and the second one is the business logic model and interface to various API. The code is based on .NET Standard 2.0, you can build it with .Net framework 4.6 or .Net Core 2.1.
 
 
-## Target Frameworks
-
+## Target Frameworks  
 * .NET Standard 2.0 
-* .NET Core 2.1 
-* .NET Framework 4.6 
 
-## Installation
+## Installation  
     The package is on Nuget. You can install it with the Nuget Package Manager, search for 'newegg.marketplace.sdk'. You can also install it with the following tools:    
 - Package Manager:  
     `Install-Package Newegg.Marketplace.SDK -Version 0.1.1-beta`    
@@ -24,12 +21,12 @@ The solution contains 2 library projects: Newegg.Marketplace.SDK.Base and Newegg
 - Paket CLI  
     `paket add Newegg.Marketplace.SDK --version 0.1.1-beta`
 
-Download the zip file according to your framework, then upzip it.
-You can choose manually build it and link library from your project or direct include the project to your solution.
-We recommend using Visual Studio 2017 or later. You can choose to build it with the command following too.
-
 
 ## build
+
+You can download the zip file and build it for your target frameworks(.Net framework4.6 or .Net core2.1).
+You can choose manually build it and link library from your project or direct include the project to your solution.
+We recommend using Visual Studio 2017 or later. You can choose to build it with the command following too.
 - To build  
     `dotnet build Newegg.Marketplace.SDK`    
 - Nuget library
